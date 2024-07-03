@@ -15,7 +15,16 @@ function App() {
   // after click on set counter call the addvalue method that has setCounter that update all the value of counter in all website ui/ux.
   const addValue = () => {
     // counter = counter + 1
+    /* here on 1 click only  1 value of the counter will be increase. */
     setCounter(counter+1)
+    setCounter(counter+1)
+    setCounter(counter+1)
+    setCounter(counter+1)
+
+    setCounter(preCounter => preCounter+1)
+    setCounter(preCounter => preCounter+1)
+    setCounter(preCounter => preCounter+1)
+    setCounter(preCounter => preCounter+1)
   }
 
   const removeValue = () => {
