@@ -40,7 +40,7 @@ function App() {
 
   // use useCallback to optimize it.nothing more.
   const copyPasswordToClipboard = useCallback(() => {
-    passwordRef.current?.Select();  // select all the value of the clipboard.
+    // passwordRef.current?.Select;  // select all the value of the clipboard.
     passwordRef.current?.setSelectionRange(0, 100);    // select the value of clipboard from 0 to 100 charecter.
     window.navigator.clipboard.writeText(password);   // use copy clipboard text.
   }, [password])
@@ -85,7 +85,7 @@ function App() {
         <div className="flex items-center gap-x-1">
           <input
             type="checkbox"
-            defaultChecked={numberAllowed} // here we create a checkbox of name Numbers.
+            defaultChecked={NumberAllowed} // here we create a checkbox of name Numbers.
             id="numberInput"
             onChange={() => {
               setNumberAllowed((prev) => !prev);
@@ -96,7 +96,7 @@ function App() {
         <div className="flex items-center gap-x-1">
           <input
             type="checkbox"
-            defaultChecked={charAllowed}  // here we create a checkbox of name Character.
+            defaultChecked={CharacterAllowed}  // here we create a checkbox of name Character.
             id="characterInput"
             onChange={() => {
               setCharAllowed((prev) => !prev)
