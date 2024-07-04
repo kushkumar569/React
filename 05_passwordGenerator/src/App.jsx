@@ -41,7 +41,7 @@ function App() {
   // use useCallback to optimize it.nothing more.
   const copyPasswordToClipboard = useCallback(() => {
     // passwordRef.current?.Select;  // select all the value of the clipboard.
-    passwordRef.current?.setSelectionRange(0, 100);    // select the value of clipboard from 0 to 100 charecter.
+    passwordRef.current?.setSelectionRange(0, 10);    // select the value of clipboard from 0 to 100 charecter.
     window.navigator.clipboard.writeText(password);   // use copy clipboard text.
   }, [password])
 
@@ -87,8 +87,8 @@ function App() {
             type="checkbox"
             defaultChecked={NumberAllowed} // here we create a checkbox of name Numbers.
             id="numberInput"
-            onChange={() => {
-              setNumberAllowed((prev) => !prev);
+            onChange={() => { 
+              setNumberAllowed((prev) => !prev); // here we know that set methord store the prev value so use that to reverse the value.
             }}
           />
           <label htmlFor="numberInput">Numbers</label>
@@ -99,7 +99,7 @@ function App() {
             defaultChecked={CharacterAllowed}  // here we create a checkbox of name Character.
             id="characterInput"
             onChange={() => {
-              setCharAllowed((prev) => !prev)
+              setCharacterAllowed((prev) => !prev);
             }}
           />
           <label htmlFor="characterInput">Characters</label>
