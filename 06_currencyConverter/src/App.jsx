@@ -3,8 +3,9 @@ import './App.css'
 import useCurrencyInfo from './CustomHook/useCurrencyInfo'
 import { InputBox } from './components'
 
-function App() {
+// here App import the all into themself and export to the main.
 
+function App() {
   /* Create a useState and set their default value.*/
   const [amount, setAmount] = useState(0)
   const [from, setFrom] = useState("usd")
@@ -29,7 +30,7 @@ function App() {
     setConvertedAmount(amount * currencyInfo[to])
   }
 
-
+// Every thing inside the InputBox can be used here becouse App import that.
   return (
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
